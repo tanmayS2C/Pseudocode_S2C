@@ -1,3 +1,5 @@
+import uuid
+
 """
 fc = first_condition
 sc = second_condition
@@ -10,9 +12,9 @@ cc = combined_condition
 """
 
 fc = [
-    {"lo": "5", "ro": "5", "o": "=="},
+    {"lo": "5", "ro": "6", "o": "=="},
     {"ao": "and"},
-    {"lo": "7", "ro": "8", "o": "=="},
+    {"lo": "7", "ro": "7", "o": "=="},
     {"ao": "and"},
     {"lo": "7", "ro": "7", "o": "=="},
     {"Lname": "First Condition"},
@@ -24,9 +26,13 @@ sc = [
     {"lo": "7", "ro": "7", "o": "=="},
     {"Lname": "Second Condition"},
 ]
-tc = [{"lo": "5", "ro": "6", "o": "=="}, {"Lname": "Third Condition"}]
 
-oc = [fc, sc, tc]
+uuid1 = str(uuid.uuid4())
+uuid2 = uuid1
+
+tc = [{"lo": f"'{uuid1}'", "ro": f"'{uuid2}'", "o": "=="}, {"Lname": "Third Condition"}]
+
+oc = [fc,sc,tc]
 result = "Default Else condition"
 
 for cond in oc:
