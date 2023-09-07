@@ -12,16 +12,16 @@ cc = combined_condition
 """
 
 fc = [
-    {"lo": "5", "ro": "6", "o": "=="},
+    {"lo": "'5e'", "ro": "'8e'", "o": "=="},
     {"ao": "and"},
-    {"lo": "7", "ro": "7", "o": "=="},
+    {"lo": "'7'", "ro": "'7'", "o": "=="},
     {"ao": "and"},
-    {"lo": "7", "ro": "7", "o": "=="},
+    {"lo": "'7'", "ro": "'7'", "o": "=="},
     {"Lname": "First Condition"},
 ]
 
 sc = [
-    {"lo": "5", "ro": "8", "o": "=="},
+    {"lo": "5", "ro": "5", "o": "=="},
     {"ao": "and"},
     {"lo": "7", "ro": "7", "o": "=="},
     {"Lname": "Second Condition"},
@@ -57,3 +57,15 @@ for cond in oc:
         break
 
 print(result)
+
+
+
+"""
+>>> uuid.uuid4()
+UUID('8b69144c-8d7d-4f63-a550-427cd72221ab')
+>>> str(uuid.uuid4()).isdigit()
+False
+>>> str("1223").isdigit()
+True
+ss    
+"""

@@ -10,7 +10,7 @@ cc = combined_condition
 fc = [
     {"lo": "5", "ro": "5", "o": "=="},
     {"ao": "and"},
-    {"lo": "7", "ro": "8", "o": "=="},
+    {"lo": "7", "ro": "7", "o": "=="},
     {"ao": "and"},
     {"lo": "7", "ro": "7", "o": "=="},
     {"Lname": "Tanmay"},
